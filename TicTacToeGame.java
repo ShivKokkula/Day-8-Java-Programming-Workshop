@@ -16,13 +16,24 @@ public class TicTacToeGame {
 	
 	public static void board() {
 		
-		char board[] = new char[10];
-		
-		for(int i=0; i<10; i++) {
-			board[i] = ' ';
-	     }
+		char[][] board = {{' ','|',' ','|',' '},
+					{'-','+','-','+','-'},
+					{' ','|',' ','|',' '},
+					{'-','+','-','+','-'},
+					{' ','|',' ','|',' '}};
+		showBoard(board);
 		
 	}
+	
+	public static void showBoard(char[][] board) {
+		for (char[] row : board) {
+			for (char column : row) {
+				System.out.print(column);
+			}
+			System.out.println();
+		}
+	}
+	
 	
 	public static void selectUserChoice() {
 		System.out.println("Please choose from X or O");
